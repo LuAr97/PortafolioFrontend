@@ -1,0 +1,177 @@
+.App {
+  text-align: center;
+  /* background-color: #cca300; */
+  font-family: Georgia, serif;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.background {
+  background-image: url("./images/sky.jpg");
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animation_layer{
+  background-position: bottom center;
+  background-size: auto 1838px;
+  background-repeat: repeat-x;
+  width: 100%;
+  position: absolute;
+}
+
+.animation_layer.parallax{
+  position: fixed;
+}
+
+.animation, .animation_layer{
+  height: 1800px;
+}
+
+.animation{
+  display: block;
+    position: relative;
+    z-index: 10;
+}
+
+h1 ,p{
+  color: #fff !important;
+}
+
+#logo{
+  background-image: url("./images/logo.png");
+  margin-top: 10%;
+  opacity: 0.5;
+
+}
+
+.transparent{
+  color: #fff !important; 
+  border: none !important;
+  
+}
+
+.transparentSkills{
+  color: #fff !important; 
+  border-color: #fff !important;
+  border-radius: 2px;
+  width: 200px;
+  &:hover {
+    background-color: rgba(36, 15, 33, 0.8) !important;
+  }
+}
+
+.btn:hover {
+  background-color: rgba(36, 15, 33, 0.5) !important;
+}
+
+.listButton {
+  background-color: rgba(36, 15, 33, 0.5) !important;
+  border-color: rgba(36, 15, 33, 0.5) !important;
+  color: #fff;
+  width: 150px;
+}
+
+.listCard {
+  background-color: rgba(36, 15, 33, 0.3) !important;
+  border-color: rgba(36, 15, 33, 0.3) !important;
+  color: #fff !important;
+  
+}
+
+/* .modalCard {
+  background-color: rgb(129, 87, 122) !important;
+  border-color: rgb(129, 87, 122) !important;
+  color: rgb(36, 15, 33) !important;
+} */
+
+.modalTitle, .modal-footer, .modal-content{
+  background-color: rgb(36, 15, 33) !important;
+  border-color: rgb(36, 15, 33) !important;
+  color: #fff !important;
+}
+
+
+.cardHeader{
+  background-color: rgba(36, 15, 33, 0.7) !important; 
+  position: relative;
+}
+
+.badge {
+  background-color: rgb(36, 15, 33) !important;
+  border-color: rgb(36, 15, 33) !important;
+  color: #fff !important;
+}
+
+.iconContainer {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: #fff; 
+  font-size: 24px; /* Adjust size as needed */
+}
+
+.btnGit{
+  background-color: rgba(36, 15, 33, 0.8) !important;
+  border-color: #fff !important;
+  color: #fff !important;
+  width: 100px;
+}
+
+.btnProject{
+  background-color: rgba(36, 15, 33, 0.8) !important;
+  border-color: rgba(36, 15, 33, 0.8) !important;
+  color: #fff !important;
+}
+
+.smaller-text {
+  font-size: 12px; /* Adjust the font size as needed */
+  color: #fff;
+}
+
+
+
+
