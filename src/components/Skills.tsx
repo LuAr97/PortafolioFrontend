@@ -27,6 +27,11 @@ const Skills = () => {
         }
     }
 
+    const show = {
+        opacity: 1,
+        display: "block"
+    };
+
     useEffect(() =>{
         retrieveSkills();
         retrieveProjects();
@@ -46,14 +51,15 @@ const Skills = () => {
                 </ButtonGroup>
             </Col>
         </Row>
-        <Row>
-            {buttonGroup == 2 &&
-                <CardsDisplay list={skills} type='skill'/>
-            }
-            {buttonGroup == 1 &&
-                <CardsDisplay list={projects} type='project'/>
-            }
-        </Row>
+        
+            <Row>
+                {buttonGroup == 2 &&
+                    <CardsDisplay list={skills} type='skill'/>
+                }
+                {buttonGroup == 1 &&
+                    <CardsDisplay list={projects} type='project'/>
+                }
+            </Row>
 
     </>);
 }

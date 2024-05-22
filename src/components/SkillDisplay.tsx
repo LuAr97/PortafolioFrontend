@@ -2,6 +2,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Badge, Tooltip, Card, CardBody, CardHeader, Col, Collapse, Row } from "reactstrap";
 import { FaAngleUp, FaAngleDown } from "react-icons/fa6";
+import { useAnimate, stagger, motion } from "framer-motion";
+
 
 interface ProjectResponse {
     id : number;
@@ -40,6 +42,7 @@ const SkillDisplay = ({item} : {item: any}) => {
                 style={{width: '80%', marginLeft: '10%'}}
 
             >
+                
                 <CardHeader  className="cardHeader" onClick={toggle} id="header">
                     {item.name}
                     <div className="iconContainer">

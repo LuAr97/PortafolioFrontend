@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 .App {
   text-align: center;
   /* background-color: #cca300; */
@@ -79,14 +80,22 @@
 
 h1 ,p{
   color: #fff !important;
+  font-family: Playfair serif;
 }
 
 #logo{
   background-image: url("./images/logo.png");
   margin-top: 10%;
-  opacity: 0.5;
+  opacity: 0.7;
 
 }
+
+.aboutme{
+  background-image: url("./images/aboutme.jpeg");
+  background-repeat: no-repeat;
+  height: 500;
+}
+.row
 
 .transparent{
   color: #fff !important; 
@@ -170,6 +179,11 @@ h1 ,p{
 .smaller-text {
   font-size: 12px; /* Adjust the font size as needed */
   color: #fff;
+}
+
+.pAboutme{
+  color: #cecece !important;
+  font-family: Playfair serif;
 }
 
 

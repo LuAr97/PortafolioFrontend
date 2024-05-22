@@ -13,7 +13,7 @@ const Home = () => {
   }
     return(
     <div className='background'>
-        <Parallax ref={parallax} pages={3} style={{ top: '0', left: '0' }} className='animation'>
+        <Parallax ref={parallax} pages={3} style={{ height: '100vh',top: '0', left: '0' }} className='animation'>
             <Introduction scroll={scroll}/>
             <ParallaxLayer offset={1} speed={0.5}>
                 <Skills />
