@@ -30,21 +30,21 @@ const ProjectBlock = () => {
 
 
     return(<Container className="block-p">
-         <Parallax ref={parallax} pages={3} style={{  width: '200vh', top: '0', left: '0'}} className='animation' horizontal>
-            <ParallaxLayer offset={0} speed={0.5}>
+         {/* <Parallax ref={parallax} pages={1} style={{  width: '100vh', top: '0', left: '0'}} className='animation' horizontal> */}
+            {/* <ParallaxLayer offset={0} speed={0.5}> */}
                 <AboutMe scroll={scroll}/>
-            </ParallaxLayer>
+            {/* </ParallaxLayer> */}
            
             
-            <ParallaxLayer offset={1} speed={0.5}>
+            {/* <ParallaxLayer offset={1} speed={0.5}>
               <Experience scroll={scroll} current={1} limit={1} end={false}/>
             </ParallaxLayer>
             
            
             <ParallaxLayer offset={2} speed={0.5}>
               <Experience scroll={scroll} current={2} limit={3} end={true}/>
-            </ParallaxLayer>
-        </Parallax>
+            </ParallaxLayer> */}
+        {/* </Parallax> */}
     </Container>)
 };
 
