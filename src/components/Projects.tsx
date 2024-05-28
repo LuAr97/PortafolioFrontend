@@ -38,7 +38,7 @@ const Projects = () => {
     }
     return (
     <>
-        <h2>Projects</h2>
+        <h2 style={{marginTop: 100}}>Projects</h2>
         <Container className="horizontal-scroll-container">
         <Button className="scroll-button" onClick={scrollLeft}><IoIosArrowBack /></Button>
             <ul className="projectsList" ref={ref} style={{height: 'auto'}}>

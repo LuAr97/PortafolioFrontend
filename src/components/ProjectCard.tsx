@@ -4,7 +4,7 @@ const ProjectCard = ({ item } : { item : any }) => {
     console.log(item.img)
     return(
         <Container>
-            <Card className="my-5 mx-auto video-card" style={{height: 'auto'}}>
+            <Card className="my-5 mx-auto video-card" >
                 <div className="video-wrapper" style={{ width: 350, height: 50 }}>
                     <video
                         className="video-content"
@@ -18,10 +18,9 @@ const ProjectCard = ({ item } : { item : any }) => {
                     </video>
                 </div>
                 <CardTitle>{item.name}</CardTitle>
-                <CardText>{item.description}</CardText>
-                <CardFooter>
-                    <Button className="btnDarkProject" onClick={() => window.open(item.gitUrl, '_blank')}>Code</Button>
-                </CardFooter>
+                <CardText style={{height: '100px'}}>{item.description}</CardText>
+                <Button className="btnDarkProject" onClick={() => window.open(item.gitUrl, '_blank')}>Code</Button>
+                
             </Card>
         </Container>
     );

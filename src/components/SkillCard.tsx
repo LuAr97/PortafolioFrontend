@@ -12,7 +12,7 @@ const SkillCard = ({ item } : { item : any }) =>{
                 className="card-image"
                 
             />
-            <CardTitle style={{color: '#fff'}}>{item.name}</CardTitle>
+            <CardTitle style={{color: 'rgb(5, 58, 99)'}}>{item.name}</CardTitle>
         </Card>
     )
 };
