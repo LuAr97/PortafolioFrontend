@@ -1,16 +1,18 @@
 ![bannerPortafolio](https://github.com/LuAr97/PortafolioFrontend/assets/102659135/80650ef3-90b7-417f-83b6-c8d98f0ba478)
 # `PORTAFOLIO`
 
+This project represents my expertise in crafting interactive and user-friendly interfaces using React and TypeScript.
 
-### `npm start`
+### `First Steps`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Download all the dependencies running the following command:
+```
+    npm install
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Set up the backend, click [here](https://github.com/LuAr97/PortafolioBackend) to go to the backend repository.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After the dependencies are downloaded and the backend is set up, run the following command to start the react app:
+```
+    npm start
+```
