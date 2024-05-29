@@ -7,14 +7,14 @@ This project represents my expertise in crafting interactive and user-friendly i
 
 ### `First Steps`
 
-Download all the dependencies running the following command:
-```
-    npm install
-```
+* Download all the dependencies running the following command:
+        ```
+            npm install
+        ```
 
-Set up the backend, click [here](https://github.com/LuAr97/PortafolioBackend) to go to the backend repository.
+* Set up the backend, click [here](https://github.com/LuAr97/PortafolioBackend) to go to the backend repository.
 
-After the dependencies are downloaded and the backend is set up, run the following command to start the react app:
-```
-    npm start
-```
+* After the dependencies are downloaded and the backend is set up, run the following command to start the react app:
+        ```
+            npm start
+        ```
