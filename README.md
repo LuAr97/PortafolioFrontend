@@ -1,4 +1,5 @@
 ![bannerPortafolio](https://github.com/LuAr97/PortafolioFrontend/assets/102659135/80650ef3-90b7-417f-83b6-c8d98f0ba478)
+https://img.shields.io/badge/react-43A81B
 # `PORTAFOLIO`
 
 This project represents my expertise in crafting interactive and user-friendly interfaces using React and TypeScript.
