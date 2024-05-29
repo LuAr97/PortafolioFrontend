@@ -13,13 +13,13 @@ const SkillsSection = () => {
 
     const scrollLeft = () => {
         if (ref.current) {
-            ref.current.scrollBy({ left: -600, behavior: 'smooth' });
+            ref.current.scrollBy({ left: -710, behavior: 'smooth' });
         }
     };
 
     const scrollRight = () => {
         if (ref.current) {
-            ref.current.scrollBy({ left: 600, behavior: 'smooth' });
+            ref.current.scrollBy({ left: 710, behavior: 'smooth' });
         }
     };
 

@@ -47,6 +47,7 @@ const Home = () => {
             <div ref={ref}>
                 
                 <SkillsSection />
+                <hr className={`my-4`} style={{ margin: '20px 0', height: 20 }} />
                 <Projects />
             </div>
         </section>
