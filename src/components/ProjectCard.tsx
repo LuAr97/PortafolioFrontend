@@ -1,28 +1,53 @@
-import { Button, Card, CardFooter, CardText, CardTitle, Container } from "reactstrap";
+import { Masonry } from "@mui/lab";
+import { Box, Button, Card, CardContent, CardMedia, Chip, Modal, Paper, Typography } from "@mui/material";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { data }from '../images/images';
+import { BorderStyle, Height } from "@mui/icons-material";
+import { AnimatePresence, motion } from "framer-motion";
 
-const ProjectCard = ({ item } : { item : any }) => {
-    console.log(item.img)
+interface project {
+    id: number;
+    name: string;
+    description: string;
+    gitUrl: string;
+    img: string;
+}
+const ProjectCard = ({ item, color } : { item : project, color: string }) => {
+    const [open, setOpen] = useState(false);
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
+    const code = () => {
+        window.open(item.gitUrl, '_blank');
+    }
+
+    const [skills, setSkills] = useState ([]);
+    const image = data.find((img) => img.name === item.name);
+    useEffect(() =>{
+        retrieveSkills();
+        
+    },[]);
+
+
+    const retrieveSkills = async () => {
+        try {
+            const response = await axios(`http://localhost:8080/projectskill/skills/${item.id}`);
+            setSkills(response.data);
+        } catch (error) {
+            console.log("Retrieve projects failed");
+        }
+    }
     return(
-        <Container>
-            <Card className="my-5 mx-auto video-card" >
-                <div className="video-wrapper" style={{ width: 350, height: 50 }}>
-                    <video
-                        className="video-content"
-                        controls={false}
-                        autoPlay={true}
-                        loop={true}
-                        muted={true}
-                    >
-                        <source src={item.img} type="video/mp4" />
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <CardTitle>{item.name}</CardTitle>
-                <CardText style={{height: '100px'}}>{item.description}</CardText>
-                <Button className="btnDarkProject" onClick={() => window.open(item.gitUrl, '_blank')}>Code</Button>
-                
-            </Card>
-        </Container>
+        <>
+        <motion.div whileHover={{ scale: 1.1 }}  onClick={code}>
+            <Paper className="projectCard" >
+                <Typography variant="h6">
+                    {item.name}
+                </Typography>
+            </Paper>
+        </motion.div>
+        
+        </>
     );
 }
 

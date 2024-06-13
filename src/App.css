@@ -1,333 +1,150 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Italiana&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Inter:wght@100..900&family=Italiana&display=swap');
 .App {
   text-align: center;
-  /* background-color: #cca300; */
-  font-family: "Italiana", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  background-color: rgba(5, 77, 133, 1);
+  display: flex;
  
 }
-.hide{
-  background-color: rgba(255, 255, 255, 0) !important;
-  border-color: rgba(255, 255, 255, 0) !important;;
-  color: #fff !important;
+.MuiPaper-root, .drawer {
+  background-color: #0f0f0f !important;
+  color: #ffff !important;
+  box-shadow: -3px 0 12px 3px #000000 !important;
+  width: 350px;
 }
-.navbar-1 {
-  position: fixed !important;
-  right: 0;
-  background-color: rgba(0, 140, 255,0) !important;
-  color: #fff !important;
-  flex: 0 0 auto;
-  padding: 10px;
-  z-index: 1000;
+.profile{
+  
+}
+section {
+  height: auto;
+}
+.intro {
+  margin-top: 15% !important;
+  width: 70%;
+  text-align: center;
+  
+}
 
+.content {
+  flex-grow: 1 !important;
+  width: calc(100% - 350px);
+  margin-left: 5% !important;
 }
-.background {
-  margin: 0;
-  padding: 0;
+.subtitle{
+  color: rgb(143, 143, 143);
+  margin-top: 10% !important;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* Align items to the start of the flex container */
-  padding-top: 100px;
-  background-image: url("./images/bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  align-items: center;
+  text-align: center;
+  
 }
-.background > div {
-  height: 550px;
-  position: relative;
-  max-height: 90vh;
-  margin: 20px;
-  background: var(--white);
-  overflow: hidden;
+.MuiBox-root{
+  margin: auto;
+  text-align: center;
 }
-.skill-section > div {
-  height: 1100px;
-  position: relative;
-  margin: 20px;
-  background: var(--white);
-  overflow: hidden;
+.MuiDivider-root{
+  border-color: #b6b1b4 !important;
 }
-.dark-section > div {
-  height: 650px;
-  position: relative;
-  margin: 20px;
-  background: var(--white);
-  overflow: hidden;
+.profile{
+  border-radius: 15%;
 }
-
-
-h2{
-  font-weight: bold !important;
+.whatsappbtn{
+  background-color: #25D366 !important;
+  color: #ffffff !important;
+  border-radius: 50% !important;
 }
-
-p{
-  font-family: "Inter", sans-serif;
-}
-
-.subtitle{
-  font-family: "Inter", sans-serif;
-  color: #fff;
-  font-weight: "medium";
-  opacity: 0.5;
+.emailbtn {
+  background-color: #ffff !important;
+  color: #D14836 !important;
 }
 section {
   margin: 0;
   padding: 0;
 }
-.dark-section p, .dark-section h4{
-  font-family: "Inter", sans-serif;
-
-}
-.contact{
-  background-color: rgba(255,255,255,0.3) !important;
-  color:white !important;
-  font-family: "Inter", sans-serif !important;
-  border-color: rgba(255,255,255,0.3) !important;
-  margin-left: 10px;
-  height: 100% !important;
-}
-.dark-section{
-  background-color: rgb(5, 77, 133);
-  color: #fff;
-  height: '650px'!important;
-}
-.contact-section{
-  height: 300px;
-  position: relative;
-  margin: 20px;
-  background: var(--white);
-  overflow: hidden;
-  background-color: rgb(5, 77, 133);
-  color: #fff;
+.circular{
+  color: #b6b1b4;
 }
 
-.skill-section {
+.timelineColor{
+  color: #b6b1b4 !important;
   
-  color: rgb(5, 58, 99);
-  background-color: rgb(171, 211, 241);
-  height: 1100px !important;
+
+}
+.MuiTimelineDot-root {
+  background-color: #FFA500 !important;
+}
+.oppositeColor{
+  color: #b6b1b4 !important;
 }
 
-
-.projectsList {
-  display: flex;
-  list-style: none;
-  height: auto;
-  overflow-x: scroll;
-  padding: 20px 0;
-  margin: 0 auto;
-}
-
-.skillsList {
-  display: flex;
-  list-style: none;
-  height: 300px;
-  overflow-x: scroll;
-  padding: 20px 0;
-  flex: 0 0 800px;
-  margin: 0 auto;
-}
-
-::-webkit-scrollbar {
-  height: 5px;
-  width: 5px;
-  background: rgba(5, 58, 99,0);
-  -webkit-border-radius: 1ex;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  -webkit-border-radius: 1ex;
-}
-
-::-webkit-scrollbar-corner {
-  background: rgba(5, 58, 99,0);
-}
-
-li {
-  flex: 0 0 200px;
-  /* background-color: #fff; */
-  margin: 0 20px 0 0;
-}
-
-li:last-of-type {
-  margin: 0;
-}
-
-.enter{
-  background-color: white !important;
-  color:black !important;
-  border-color: white !important;
-  font-family: "Inter", sans-serif !important;
-  
-}
-
-.enter,.contact {
-  width: 'auto' !important;
-}
-
-h1{
-  color: #fff !important;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.menu {
+  position: fixed !important;
+  flex-grow: 1 !important;
+  width: 100px;
+  margin-top: 15%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #1d1d1d !important;
+  border: 1px solid #1d1d1d;
+  border-radius: 10px;
+  width: 3%;
 }
 
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menubtn1{
+  color: #ff00b3 !important;
+}
+.menubtn2{
+  color: #00ff00 !important;
+}
+.menubtn3{
+  color: #FFA500 !important;
+}
+.menubtn4{
+  color: #05bdfa !important;
+}
+.menubtn5{
+  color: #c305f8 !important;
 }
 
-.animation_layer{
-  background-position: bottom center;
-  background-size: auto 1838px;
-  background-repeat: repeat-x;
-  width: 100%;
-  position: absolute;
-}
-
-.animation_layer.parallax{
-  position: fixed;
-}
-
-.animation, .animation_layer{
-  height: 1800px;
-}
-
-.animation{
-  display: block;
-    position: relative;
-    z-index: 10;
-}
-
-.btnDarkProject{
-  background-color: rgb(5, 58, 99) !important;
-  border-color: rgba(5, 77, 133,1) !important;
-  color: #fff !important;
-}
-.btnDark{
-  background-color: rgba(4, 115, 198,1) !important;
-  border-color: rgba(4, 115, 198,1) !important;
-  color: #fff !important;
-}
-
-.scroll-button {
-  background-color: rgba(5, 58, 99,0) !important;
-  border-color: rgba(5, 58, 99,0) !important;
-  color: rgba(5, 58, 99,1) !important;
-  padding: 10px;
-  cursor: pointer;
-  z-index: 1;
-  font-family: "Inter", sans-serif;
-  font-weight: bolder;
-  
-}
-
-.horizontal-scroll-container {
+.projectCard{
+  border-radius: 50% !important;
+  width: 150px;
+  height: 150px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  height: auto;
+  text-align: center;
+  border: 3px solid #05bdfa;
 }
 
-
-.skill-card {
-  background-color: rgba(4, 115, 198,0) !important;
-  border-color: rgba(4, 115, 198,0) !important;
-  color: #000 !important;
-  margin: auto;
-  font-family: "Inter", sans-serif;
-  
+.projectCard:hover{
+  cursor: pointer;
 }
-.card-image {
+.skillcard {
+  border-width: 3px;
+  margin-top: 50%;
+  border: 3px solid #c305f8;
+  border-radius: 50% !important;
+  display: flex;
+  width: 85px;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.item {
+  list-style-type: none;
+}
+
+.skillsbox {
   display: block;
-  margin: 20px auto; /* Center the image horizontally and add vertical spacing */
-  width: 100%; /* Adjust the width as needed */
-  max-width: 80px; /* Maximum width of the image */
-  height: auto; /* Maintain the aspect ratio */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10%;
+  width: 90%;
+  .MuiGrid-root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
-
-.video-card {
-  background-color: rgba(4, 115, 198,0) !important;
-  border-color: rgba(4, 115, 198,0) !important;
-  color: #fff !important;
-  margin: auto;
-  font-family: "Inter", sans-serif;
-  
-}
-
-.card-text {
-  font-weight: lighter;
-  font-size: 13px;
-}
-
-.video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  height: 0;
-  overflow: hidden;
-  max-width: 100%;
-  background: #000;
-}
-
-.video-content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.whatsapp {
-  background-color: #25D366 !important;
-  color: #fff !important;
-  border-color: #25D366 !important;
-  border-radius: 20px !important;
-}
-
-.gmail {
-  background-color: #fff !important;
-  color: #000 !important;
-  border-radius: 20px !important;
-  border-color: #DB4437 !important;
-  border-width: 3px !important;
-}
-
-.gmailIcon {
-  color: #DB4437;
-}
-
-

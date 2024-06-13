@@ -1,27 +1,20 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll } from "framer-motion";
-import axios from "axios";
-import ProjectCard from "./ProjectCard";
-import { Button, Container } from "reactstrap";
-import { IoIosArrowBack } from "react-icons/io";
-import { IoIosArrowForward } from "react-icons/io";
+import { Masonry } from '@mui/lab';
+import { Box, Chip, Divider, Grid, Paper, Typography } from '@mui/material';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import ProjectCard from './ProjectCard';
+
+interface project {
+    id: number;
+    name: string;
+    description: string;
+    img: string;
+}
+
 
 const Projects = () => {
-    const ref = useRef<HTMLUListElement>(null);
-    const { scrollXProgress } = useScroll({ container: ref });
-    const [projects, setProjects] = useState ([]);
-
-    const scrollLeft = () => {
-        if (ref.current) {
-            ref.current.scrollBy({ left: -400, behavior: 'smooth' });
-        }
-    };
-
-    const scrollRight = () => {
-        if (ref.current) {
-            ref.current.scrollBy({ left: 400, behavior: 'smooth' });
-        }
-    };
+    const [projects, setProjects] = useState<Array<project>>([]);
+    const colors = ['#CCF1FF', '#E0D7FF', '#FFCCE1', '#D7EEFF', '#FAFFC7']
 
     useEffect(() =>{
         retrieveProjects();
@@ -37,22 +30,26 @@ const Projects = () => {
         }
     }
     return (
-    <>
-        <h2 style={{marginTop: 100}}>Projects</h2>
-        <Container className="horizontal-scroll-container">
-        <Button className="scroll-button" onClick={scrollLeft}><IoIosArrowBack /></Button>
-            <ul className="projectsList" ref={ref} style={{height: 'auto'}}>
-                {(projects != null && projects.length > 0) &&
-                    projects.map((item, index) => (
-                        <li key={index}>
-                            <ProjectCard item={item} />
-                        </li>
-                    ))
+        <>
+            <Divider variant='middle' style={{marginTop: '10%'}}/>
+            <Box style={{textAlign: 'center', marginLeft:'5%', marginTop: '5%'}}>
+                <Chip label="Projects" variant="outlined" style={{color: '#05bdfa', borderColor:'#05bdfa'}}/>
+            </Box>
+            <Typography variant="body1" style={{textAlign: 'left'}} className='subtitle'>
+                Here are some of the projects I have worked on, click to open the code and find out more about them.
+            </Typography>
+            <Box style={{marginTop: '15%'}}>
+                <Grid container spacing={5}>
+                    {projects.map((project: any, index: number) => (
+                        <Grid item xs={3} key={index} >
+                            <ProjectCard item={project} color={colors[index]}/>
+                        </Grid>
+                    ))}
                     
-                }
-            </ul>
-            <Button className="scroll-button" onClick={scrollRight}><IoIosArrowForward /></Button>
-        </Container>
-    </>)
-}
+                </Grid>
+            </Box>
+        </>
+    );
+};
+
 export default Projects;
