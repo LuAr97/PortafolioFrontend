@@ -55,6 +55,11 @@ section {
   background-color: #ffff !important;
   color: #D14836 !important;
 }
+.linkedinbtn{
+  background-color: #0077B5 !important;
+  color: #ffffff !important;
+
+}
 section {
   margin: 0;
   padding: 0;
@@ -73,16 +78,18 @@ section {
 }
 .oppositeColor{
   color: #b6b1b4 !important;
+  width: auto !important;
 }
 
 .menu {
   position: fixed !important;
   flex-grow: 1 !important;
-  width: 100px;
+  width: auto !important;
   margin-top: 15%;
   justify-content: center;
-  background-color: #1d1d1d !important;
-  border: 1px solid #1d1d1d;
+  background-color: rgba(31, 30, 30, 0.2) !important;
+  
+  border: 1px solid rgba(31, 30, 30, 0.2);
   border-radius: 10px;
   width: 3%;
 }
@@ -120,7 +127,7 @@ section {
 .skillcard {
   border-width: 3px;
   margin-top: 50%;
-  border: 3px solid #c305f8;
+  border: 3px solid #b4b4b4;
   border-radius: 50% !important;
   display: flex;
   width: 85px;

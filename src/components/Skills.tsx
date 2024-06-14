@@ -3,7 +3,7 @@ import { Box, Chip, Divider, Grid, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import { motion } from 'framer-motion';
 import React, { useEffect, useState } from 'react';
-
+import { isMobile } from 'react-device-detect';
 interface Skill {
     id: number;
     name: string;
@@ -63,8 +63,8 @@ const Skills = () => {
         >
         <Box className='skillsbox'>
             <Grid container spacing={3}>
-                {skills.slice(0, skills.length/2 + 1).map((skill: any, index: number) => (
-                    <Grid item xs={2} key={index} >
+                {skills.slice(0, isMobile ? skills.length + 1 :skills.length/2 + 1).map((skill: any, index: number) => (
+                    <Grid item xs={isMobile ? 4 : 2} key={index} >
                         <motion.li key={index} className="item" variants={item}>
                             
                             <Paper elevation={0} className="skillcard" style={{borderWidth :`3px`, borderStyle: 'solid'}}>
@@ -79,23 +79,25 @@ const Skills = () => {
                     </Grid>
                 ))}
             </Grid>
-            <Grid container spacing={10}>
-                {skills.slice(skills.length/2 + 1, skills.length + 1).map((skill: any, index: number) => (
-                    <Grid item xs={2} key={index} >
-                        <motion.li key={index} className="item" variants={item}>
-                            
-                            <Paper elevation={0} className="skillcard" style={{borderWidth :`3px`, borderStyle: 'solid'}}>
-                                <Box>
-                                    <img src={skill.img} alt={skill.name} style={{width: '25%', height: '35%'}}/>
-                                    <Typography variant="body1" className='timelineColor'>
-                                        {skill.name}
-                                    </Typography>
-                                </Box>
-                            </Paper>
-                        </motion.li>
-                    </Grid>
-                ))}
-            </Grid>
+            {!isMobile &&
+                <Grid container spacing={10}>
+                    {skills.slice(skills.length/2 + 1, skills.length + 1).map((skill: any, index: number) => (
+                        <Grid item xs={2} key={index} >
+                            <motion.li key={index} className="item" variants={item}>
+                                
+                                <Paper elevation={0} className="skillcard" style={{borderWidth :`3px`, borderStyle: 'solid'}}>
+                                    <Box>
+                                        <img src={skill.img} alt={skill.name} style={{width: '25%', height: '35%'}}/>
+                                        <Typography variant="body1" className='timelineColor'>
+                                            {skill.name}
+                                        </Typography>
+                                    </Box>
+                                </Paper>
+                            </motion.li>
+                        </Grid>
+                    ))}
+                </Grid>
+            }
         </Box>
         </motion.ul>
         <br/>

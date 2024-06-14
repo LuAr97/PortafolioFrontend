@@ -25,13 +25,13 @@ const Introduction = ({scroll}:{scroll : any}) => {
                     Hi there!
                 </Typography>
                 <Typography variant="h5" gutterBottom >
-                    I am Luisa a passionate <a style={{color: color}}>Software Developer </a>
+                    I am Luisa, a passionate <a style={{color: color}}>Software Developer </a>
                 </Typography>
                 <Typography variant="h5" gutterBottom >
                     with 2 years of experience in building 
                 </Typography>
                 <Typography variant="h5" gutterBottom >
-                    dynamic and user-friendly websites
+                    dynamic and user-friendly websites.
                 </Typography>
             </motion.div>
             <motion.div
@@ -45,7 +45,7 @@ const Introduction = ({scroll}:{scroll : any}) => {
                 
             >
                 <Typography className='subtitle' variant="subtitle1" gutterBottom >
-                    Take a minute of your time to see and discover more about me and my projects
+                    Take a minute of your time to see and discover more about me and my projects.
                 </Typography>
             </motion.div>
             <Grid container spacing={0.5} style={{marginTop: '15%', justifyItems: 'center'}}>

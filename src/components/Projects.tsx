@@ -3,7 +3,7 @@ import { Box, Chip, Divider, Grid, Paper, Typography } from '@mui/material';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
-
+import { isMobile } from 'react-device-detect';
 interface project {
     id: number;
     name: string;
@@ -41,7 +41,7 @@ const Projects = () => {
             <Box style={{marginTop: '15%'}}>
                 <Grid container spacing={5}>
                     {projects.map((project: any, index: number) => (
-                        <Grid item xs={3} key={index} >
+                        <Grid item xs={isMobile ? 6 : 3} key={index} >
                             <ProjectCard item={project} color={colors[index]}/>
                         </Grid>
                     ))}
